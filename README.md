@@ -1,5 +1,4 @@
 # Nom final de la formation
-# Nom final de la formation
 
 Ce dossier Repository est lié au cours `Nom final de la formation`. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
 
