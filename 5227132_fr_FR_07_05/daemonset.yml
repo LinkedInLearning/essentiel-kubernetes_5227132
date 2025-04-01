@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: app3-ds
+spec:
+  selector:
+    matchLabels:
+      app3: daemon
+  template:
+    metadata:
+      labels:
+        app3: daemon
+    spec:
+      containers:
+      - name: daemon
+        image: alpine:3.14
+        command: ["sleep","3600"]
+  updateStrategy: 
+    type: OnDelete
