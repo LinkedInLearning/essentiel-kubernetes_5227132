@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+spec:
+  containers:
+  - name: mysql
+    image: mysql:8
+    volumeMounts:
+    - name: data
+      mountPath: /var/lib/mysql
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: mysql-pass
+          key: password
+  volumes:
+  - name: data
+    nfs:
+      server: 192.168.1.5
+      path: /data/db

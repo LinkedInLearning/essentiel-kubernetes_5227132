@@ -1,0 +1,42 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cron
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: backup
+            image: alpine:3.12
+            command: ["/bin/sh"]
+            args: ["-c","tar -cvf /backup/$BACKUP_DIR/backup.tar.`date +%h%d-%H%M` /logs_master"]
+            env:
+            - name: BACKUP_DIR
+              valueFrom:
+                configMapKeyRef:
+                  name: backup-dir
+                  key: dir
+            volumeMounts:
+            - name: logs-master
+              mountPath: /logs_master
+            - name: backup
+              mountPath: /backup
+          restartPolicy: OnFailure
+          affinity:
+            nodeAffinity:
+              requiredDuringSchedulingIgnoredDuringExecution:
+                nodeSelectorTerms:
+                - matchExpressions:
+                  - key: node-role.kubernetes.io/control-plane
+                    operator: Exists
+
+          volumes:
+          - name: backup
+            hostPath:
+              path: /backup
+          - name: logs-master
+            hostPath:
+              path: /var/log

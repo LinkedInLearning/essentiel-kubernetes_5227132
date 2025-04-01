@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: daemon
+        image: alpine:3.12
+        command: ["/bin/sh"]
+        args: ["-c","while true; do echo `hostname` `date` >> /mnt/index.html ; sleep 60 ;done"]
+        volumeMounts:
+        - name: data
+          mountPath: /mnt
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: nfs-pvc

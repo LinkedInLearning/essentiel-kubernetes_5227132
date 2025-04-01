@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wl
+  namespace: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wl
+  template:
+    metadata:
+      labels:
+        app: wl
+    spec:
+      containers:
+      - name: debug
+        image: nginx:1.21-alpine
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 200Mi
+
+

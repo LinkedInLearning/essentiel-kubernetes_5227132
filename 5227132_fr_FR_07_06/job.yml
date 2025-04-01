@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: init
+spec:
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: init
+        image: alpine:3.12
+        command: ["/bin/sh"]
+        args: ["-c","mkdir /backup/$BACKUP_DIR"]
+        env:
+        - name: BACKUP_DIR
+          valueFrom:
+            configMapKeyRef:
+              name: backup-dir
+              key: dir
+        volumeMounts:
+        - name: backup
+          mountPath: /backup
+      volumes:
+      - name: backup
+        hostPath:
+          path: /backup
