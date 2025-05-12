@@ -6,7 +6,7 @@ Ce dossier Repository est lié au cours `L'essentiel de Kubernetes`. Le cours en
 
 La meilleure façon d'apprendre un langage est de l'utiliser dans la pratique. C'est pourquoi ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail. Consultez la vidéo "Utiliser Codespaces sur GitHub" pour savoir comment démarrer.    
 
-DESCRIPTION DE LA FORMATION
+Si vous cherchez une solution pour déployer, mettre à jour ou faire évoluer vos services afin de répondre aux montées en charge, cette formation est faite pour vous. Guidé par Samir Lakhdari, consultant expert et formateur IT, vous apprendrez à exploiter Kubernetes, la plateforme open source incontournable pour gérer vos applications de manière efficace. Au fil de ce cours, vous découvrirez comment utiliser Kubernetes comme orchestrateur pour déployer vos services et les rendre disponibles dans un environnement proche de votre site de production. Vous serez en mesure d’exploiter tout le potentiel de cet outil puissant, capable de proposer des solutions concrètes et adaptées à vos besoins. Laissez-vous accompagner par l’expertise de Samir Lakhdari pour optimiser vos projets dès aujourd’hui.
 
 ## Instructions
 
