@@ -16,7 +16,7 @@ Si vous cherchez une solution pour déployer, mettre à jour ou faire évoluer v
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com/learning/l-essentiel-de-kubernetes-24869325
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4D0DAQHb6xICp_Lk5g/learning-public-crop_675_1200/B4DZbDmF9WGUAY-/0/1747038265455?e=2147483647&v=beta&t=C4a9S8r0N1OQ5YPGUfY_i_HJJRuPSc60idD0APY84Bg
 [lil-URL-trainer]: https://www.linkedin.com/learning/instructors/samir-lakhdari
 
 [1]: # (End of FR-Instruction ###############################################################################################)
